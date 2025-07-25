@@ -28,7 +28,7 @@ export const Products = () => {
 	}
 
 	return (
-		<div className="flex flex-wrap gap-6 justify-center">
+		<div className="flex flex-wrap gap-6 justify-center mt-8">
 			{products.map((product) => (
 				<ProductCard key={product.id} product={product} />
 			))}

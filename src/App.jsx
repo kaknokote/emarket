@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from './store/slices/products-slice';
 import { Route, Routes } from 'react-router-dom';
 import { ProductsPage } from './pages/products-page';
+import { Header } from './components/header/header';
 
 export const App = () => {
 	const dispatch = useDispatch();
@@ -13,7 +14,8 @@ export const App = () => {
 	}, [dispatch]);
 
 	return (
-		<div className="w-[1300px] mx-auto my-16 px-6 py-6 bg-neutral-50 min-h-screen rounded-xl">
+		<div className="w-[1200px] mx-auto my-16 px-6 py-6 bg-neutral-50 min-h-screen rounded-xl">
+			<Header />
 			<Routes>
 				<Route path="/" element={<ProductsPage />} />
 			</Routes>

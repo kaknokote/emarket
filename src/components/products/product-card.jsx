@@ -1,9 +1,9 @@
 export const ProductCard = ({ product }) => {
 	return (
-		<div className="w-[280px] h-[370px] mt-2.5 bg-white rounded-lg  overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+		<div className="w-[260px] h-[370px] mt-2.5 bg-white rounded-lg  overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
 			<img
 				src={product.imageUrl}
-				className="w-full h-[220px] pt-3.5 object-contain"
+				className="w-full h-[220px] pt-8 object-contain"
 				alt={product.name}
 			/>
 			<div className="p-4 flex flex-col justify-center bg-gray-100 mt-auto ">
