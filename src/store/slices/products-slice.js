@@ -21,14 +21,15 @@ export const fetchProducts = createAsyncThunk(
 
 export const addNewProduct = createAsyncThunk(
 	'products/addNewProduct',
-	async function (productData, { rejectWithValue, dispatch }) {
+	async function (productData, { rejectWithValue }) {
 		try {
 			const product = {
-				// id: new Date().toISOString(),
+				id: new Date().toISOString(),
 				name: productData.name,
 				description: productData.description,
 				imageUrl: productData.imageUrl,
 				category: productData.category,
+				price: productData.price,
 			};
 
 			const response = await fetch(`http://localhost:3000/products`, {
@@ -42,7 +43,7 @@ export const addNewProduct = createAsyncThunk(
 			}
 
 			const newProduct = await response.json();
-			dispatch(addProduct(newProduct));
+			// dispatch(addProduct(newProduct));ы
 
 			return newProduct;
 		} catch (error) {
@@ -64,7 +65,8 @@ export const deleteProduct = createAsyncThunk(
 				throw new Error('Ошибка удаления');
 			}
 
-			dispatch(removeProduct({ id }));
+			// dispatch(removeProduct({ id }));
+			return id;
 		} catch (error) {
 			return rejectWithValue(error.message);
 		}
@@ -159,6 +161,9 @@ const productsSlice = createSlice({
 			})
 			.addCase(deleteProduct.fulfilled, (state, action) => {
 				state.status = 'resolved';
+				state.products = state.products.filter(
+					(product) => product.id !== action.payload,
+				);
 			})
 			.addCase(deleteProduct.rejected, (state, action) => {
 				state.status = 'rejected';

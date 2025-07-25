@@ -5,70 +5,80 @@
 			"name": "iPhone 15 Pro",
 			"description": "Флагманский смартфон Apple с процессором A17 Pro и камерой 48 МП",
 			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohkecdOkdnCMvhHMVbyR9U6BAnJO4pNTrGw&s",
-			"category": "Смартфон"
+			"category": "Смартфон",
+			"price": 68999
 		},
 		{
 			"id": "2",
 			"name": "Samsung Galaxy S23 Ultra",
 			"description": "Смартфон с экраном 6.8'' AMOLED и S-Pen",
 			"imageUrl": "https://technolove.ru/upload/iblock/362/5ukyt2iwdybvj1w3xkkj0ri3b062yiqi.png",
-			"category": "Смартфон"
+			"category": "Смартфон",
+			"price": 51999
 		},
 		{
 			"id": "3",
 			"name": "Dyson V15 Detect",
 			"description": "Беспроводной пылесос с лазерной подсветкой пыли",
 			"imageUrl": "https://istudio-shop.ru/upload/dev2fun.imagecompress/webp/iblock/2c1/ae638chn4eh3dclicxrtunowibij9f1n.webp",
-			"category": "Пылесос"
+			"category": "Пылесос",
+			"price": 49999
 		},
 		{
 			"id": "4",
 			"name": "Xiaomi Robot Vacuum S10",
 			"description": "Робот-пылесос с функцией мытья полов",
 			"imageUrl": "https://tech-iq.ru/upload/iblock/a05/wg7w1e35m0d2unuts0dbsc2rvy7kyrp2.png",
-			"category": "Пылесос"
+			"category": "Пылесос",
+			"price": 18999
 		},
 		{
 			"id": "5",
 			"name": "MacBook Pro 14 M2 Pro",
 			"description": "Ноутбук Apple с дисплеем Liquid Retina XDR",
 			"imageUrl": "https://appdom.ru/image/cache/catalog/mac/macbookpro14m3/apple-macbook-pro-14-2023-silver-2-1000x1000.jpg",
-			"category": "Ноутбук"
+			"category": "Ноутбук",
+			"price": 119999
 		},
 		{
 			"id": "6",
 			"name": "ASUS ROG Zephyrus G14",
 			"description": "Игровой ноутбук с процессором AMD Ryzen 9",
 			"imageUrl": "https://microless.com/cdn/products/38462ad2d406abd96b94bf338fc4a235-hi.jpg",
-			"category": "Ноутбук"
+			"category": "Ноутбук",
+			"price": 99999
 		},
 		{
 			"id": "7",
 			"name": "Sony WH-1000XM5",
 			"description": "Беспроводные наушники с шумоподавлением",
 			"imageUrl": "https://doctorhead.ru/upload/dev2fun.imagecompress/webp/iblock/81e/5zure0rbjtg5lv3nvxktztkaflzycvg3/sony_wh1000xm5_beige_silver.webp",
-			"category": "Наушники"
+			"category": "Наушники",
+			"price": 8999
 		},
 		{
 			"id": "8",
 			"name": "AirPods Pro 2",
 			"description": "Наушники Apple с улучшенным шумоподавлением",
 			"imageUrl": "https://yablonya.com/wp-content/uploads/2023/11/dizain-bez-nazvaniya-2023-11-13t160146.196.jpg",
-			"category": "Наушники"
+			"category": "Наушники",
+			"price": 13999
 		},
 		{
 			"id": "9",
 			"name": "PlayStation 5",
 			"description": "Игровая консоль нового поколения от Sony",
 			"imageUrl": "https://portagame.ru/katalog/game/ps5/ps5-slim-white_m.jpg",
-			"category": "Консоль"
+			"category": "Консоль",
+			"price": 58999
 		},
 		{
 			"id": "10",
 			"name": "Xbox Series X",
 			"description": "Мощная игровая консоль от Microsoft",
 			"imageUrl": "https://cmstore.ru/upload/iblock/565/b7wv8u9k2bumsfj2765lgnl7kmkur1os.webp",
-			"category": "Консоль"
+			"category": "Консоль",
+			"price": 54999
 		}
 	]
 }
