@@ -2,7 +2,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from './store/slices/products-slice';
 import { Route, Routes } from 'react-router-dom';
-import { CartPage, LoginPage, ProductsPage, RegisterPage } from './pages';
+import {
+	CartPage,
+	LoginPage,
+	ProductPage,
+	ProductsPage,
+	RegisterPage,
+} from './pages';
 import { Header } from './components';
 
 export const App = () => {
@@ -18,6 +24,7 @@ export const App = () => {
 			<Header />
 			<Routes>
 				<Route path="/" element={<ProductsPage />} />
+				<Route path="/product/:id" element={<ProductPage />} />
 				<Route path="/login" element={<LoginPage />} />
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/cart" element={<CartPage />} />
