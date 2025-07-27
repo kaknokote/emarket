@@ -155,6 +155,7 @@ const productsSlice = createSlice({
 				state.status = 'rejected';
 				state.error = action.payload;
 			})
+
 			.addCase(deleteProduct.pending, (state) => {
 				state.status = 'loading';
 				state.error = null;
@@ -169,6 +170,7 @@ const productsSlice = createSlice({
 				state.status = 'rejected';
 				state.error = action.payload;
 			})
+
 			.addCase(updateProductData.pending, (state) => {
 				state.status = 'loading';
 				state.error = null;
@@ -185,6 +187,7 @@ const productsSlice = createSlice({
 				state.status = 'rejected';
 				state.error = action.payload;
 			})
+
 			.addCase(addNewProduct.pending, (state) => {
 				state.status = 'loading';
 				state.error = null;

@@ -20,7 +20,7 @@ export const Products = () => {
 
 	if (status === 'rejected' && error) {
 		return (
-			<div className="text-center p-6 text-red-600">Error: {error}</div>
+			<div className="text-center p-6 text-red-400">Error: {error}</div>
 		);
 	}
 
