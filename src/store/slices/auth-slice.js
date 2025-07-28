@@ -52,6 +52,21 @@ export const register = createAsyncThunk(
 	},
 );
 
+export const restoreAuth = createAsyncThunk(
+	'auth/restoreAuth',
+	async function (_, { rejectWithValue }) {
+		try {
+			const user = localStorage.getItem('user');
+			if (!user) {
+				throw new Error('Нет данных о пользователе');
+			}
+			return JSON.parse(user);
+		} catch (error) {
+			return rejectWithValue(error.message);
+		}
+	},
+);
+
 export const authSlice = createSlice({
 	name: 'auth',
 	initialState: {
@@ -64,6 +79,10 @@ export const authSlice = createSlice({
 			state.user = null;
 			state.status = null;
 			state.error = null;
+			localStorage.removeItem('user');
+		},
+		clearError(state) {
+			state.error = null;
 		},
 	},
 	extraReducers: (builder) => {
@@ -75,6 +94,7 @@ export const authSlice = createSlice({
 			.addCase(login.fulfilled, (state, action) => {
 				state.status = 'resolved';
 				state.user = action.payload;
+				localStorage.setItem('user', JSON.stringify(action.payload));
 			})
 			.addCase(login.rejected, (state, action) => {
 				state.status = 'rejected';
@@ -88,13 +108,22 @@ export const authSlice = createSlice({
 			.addCase(register.fulfilled, (state, action) => {
 				state.status = 'resolved';
 				state.user = action.payload;
+				localStorage.setItem('user', JSON.stringify(action.payload));
 			})
 			.addCase(register.rejected, (state, action) => {
 				state.status = 'rejected';
 				state.error = action.payload;
+			})
+			.addCase(restoreAuth.fulfilled, (state, action) => {
+				state.status = 'resolved';
+				state.user = action.payload;
+			})
+			.addCase(restoreAuth.rejected, (state) => {
+				state.status = null;
+				state.user = null;
 			});
 	},
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, clearError } = authSlice.actions;
 export default authSlice.reducer;

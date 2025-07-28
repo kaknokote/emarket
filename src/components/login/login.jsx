@@ -1,24 +1,33 @@
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { login } from '../../store/slices/auth-slice';
 import { Input } from '../input/input';
+import { useAuth } from '../../hooks';
 
 export const Login = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { user, status, error } = useSelector((state) => state.auth);
+	const { isAuthentificated, status, error, clearError } = useAuth();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 	useEffect(() => {
-		if (user) {
+		if (isAuthentificated) {
 			navigate('/');
 		}
-	}, [user]);
+	}, [isAuthentificated, navigate]);
+
+	const handleChange = (setter) => (event) => {
+		setter(event.target.value);
+		if (error) {
+			clearError();
+		}
+	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		clearError();
 		dispatch(login({ email, password })).then((result) => {
 			if (result.meta.requestStatus === 'fulfilled') {
 				navigate('/');
@@ -38,25 +47,25 @@ export const Login = () => {
 					name="email"
 					placeholder="Электронная почта"
 					value={email}
-					onChange={(e) => setEmail(e.target.value)}
+					onChange={handleChange(setEmail)}
 				/>
 				<Input
 					type="password"
 					name="password"
 					placeholder="Пароль"
 					value={password}
-					onChange={(e) => setPassword(e.target.value)}
+					onChange={handleChange(setPassword)}
 				/>
 				<button
 					type="submit"
-					disabled={status === 'loading'}
-					className="w-full p-2.5 bg-emerald-600 text-white rounded-md disabled:bg-emerald-400"
+					disabled={status === 'loading' || error}
+					className="w-full p-2.5 bg-blue-400 text-white rounded-md disabled:bg-blue-200 hover:bg-blue-500 transition-colors duration-200"
 				>
 					{status === 'loading' ? 'Загрузка...' : 'Войти'}
 				</button>
 			</form>
 			<Link to="/register">
-				<div className="mt-5 text-center text-emerald-600">
+				<div className="mt-5 text-center text-blue-400 hover:underline">
 					У меня ещё нет аккаунта
 				</div>
 			</Link>

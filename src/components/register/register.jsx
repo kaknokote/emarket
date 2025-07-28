@@ -1,26 +1,42 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { register } from '../../store/slices/auth-slice';
 import { Input } from '../input/input';
+import { useAuth } from '../../hooks';
 
 export const Register = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { user, status, error } = useSelector((state) => state.auth);
+	const { status, error, isAuthenticated, clearError } = useAuth();
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 
 	useEffect(() => {
-		if (user) {
+		if (isAuthenticated) {
 			navigate('/');
 		}
-	}, [user]);
+	}, [isAuthenticated, navigate]);
+
+	const handleChange = (setter) => (event) => {
+		setter(event.target.value);
+		if (error) {
+			clearError();
+		}
+	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		if (password !== confirmPassword) {
+			dispatch({
+				type: 'auth/register/rejected',
+				payload: 'Пароли не совпадают',
+			});
+			return;
+		}
+		clearError();
 		dispatch(
 			register({
 				name,
@@ -48,38 +64,41 @@ export const Register = () => {
 					name="name"
 					placeholder="Имя"
 					value={name}
-					onChange={(e) => setName(e.target.value)}
+					onChange={handleChange(setName)}
 				/>
 				<Input
 					type="email"
 					name="email"
 					placeholder="Электронная почта"
 					value={email}
-					onChange={(e) => setEmail(e.target.value)}
+					onChange={handleChange(setEmail)}
 				/>
 				<Input
 					type="password"
 					name="password"
 					placeholder="Пароль"
 					value={password}
-					onChange={(e) => setPassword(e.target.value)}
+					onChange={handleChange(setPassword)}
 				/>
 				<Input
 					type="password"
 					name="confirmPassword"
 					placeholder="Повтор пароля"
 					value={confirmPassword}
-					onChange={(e) => setConfirmPassword(e.target.value)}
+					onChange={handleChange(setConfirmPassword)}
 				/>
 				<button
 					type="submit"
-					className="w-full p-2.5 bg-emerald-600 text-white rounded-md"
+					disabled={status === 'loading' || error}
+					className="w-full p-2.5 bg-blue-400 text-white rounded-md disabled:bg-blue-200 hover:bg-blue-500 transition-colors duration-200"
 				>
-					Зарегистрироваться
+					{status === 'loading'
+						? 'Загрузка...'
+						: 'Зарегистрироваться'}
 				</button>
 			</form>
 			<Link to="/login">
-				<div className="mt-5 text-center text-emerald-600">
+				<div className="mt-5 text-center text-blue-400 hover:underline">
 					У меня уже есть аккаунт
 				</div>
 			</Link>

@@ -10,13 +10,14 @@ import {
 	RegisterPage,
 } from './pages';
 import { Header } from './components';
+import { restoreAuth } from './store/slices/auth-slice';
 
 export const App = () => {
 	const dispatch = useDispatch();
-	const products = useSelector((state) => state.products.products);
 
 	useEffect(() => {
 		dispatch(fetchProducts());
+		dispatch(restoreAuth());
 	}, [dispatch]);
 
 	return (
