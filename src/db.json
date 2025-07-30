@@ -5,8 +5,18 @@
       "email": "qwe@qwe.qwe",
       "password": "qweqwe",
       "role": "user",
-      "id": 1,
-      "cart": []
+      "id": "1",
+      "cart": [
+        {
+          "productId": "5"
+        },
+        {
+          "productId": "2"
+        },
+        {
+          "productId": "10"
+        }
+      ]
     },
     {
       "name": "Серега",
@@ -21,7 +31,7 @@
           "productId": "7"
         }
       ],
-      "id": 2
+      "id": "2"
     }
   ],
   "products": [
