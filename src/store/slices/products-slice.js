@@ -43,7 +43,6 @@ export const addNewProduct = createAsyncThunk(
 			}
 
 			const newProduct = await response.json();
-			// dispatch(addProduct(newProduct));ы
 
 			return newProduct;
 		} catch (error) {
@@ -65,7 +64,6 @@ export const deleteProduct = createAsyncThunk(
 				throw new Error('Ошибка удаления');
 			}
 
-			// dispatch(removeProduct({ id }));
 			return id;
 		} catch (error) {
 			return rejectWithValue(error.message);

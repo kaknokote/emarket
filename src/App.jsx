@@ -16,12 +16,12 @@ export const App = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(fetchProducts());
 		dispatch(restoreAuth());
+		dispatch(fetchProducts());
 	}, [dispatch]);
 
 	return (
-		<div className="w-[1200px] mx-auto my-16 px-6 py-6 bg-neutral-50 min-h-screen rounded-xl">
+		<div className="w-[1200px] mx-auto my-6 px-6 py-6 bg-neutral-50 min-h-screen rounded-xl">
 			<Header />
 			<Routes>
 				<Route path="/" element={<ProductsPage />} />

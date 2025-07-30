@@ -1,193 +1,209 @@
 {
-	"users": [
-		{
-			"name": "Владислав",
-			"email": "qwe@qwe.qwe",
-			"password": "qweqwe",
-			"role": "user",
-			"id": 1
-		}
-	],
-	"products": [
-		{
-			"id": "1",
-			"name": "iPhone 15 Pro",
-			"description": "Флагманский смартфон Apple с процессором A17 Pro и камерой 48 МП",
-			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohkecdOkdnCMvhHMVbyR9U6BAnJO4pNTrGw&s",
-			"category": "Смартфон",
-			"price": 68999,
-			"quantity": 50
-		},
-		{
-			"id": "2",
-			"name": "Samsung Galaxy S23 Ultra",
-			"description": "Смартфон с экраном 6.8'' AMOLED и S-Pen",
-			"imageUrl": "https://technolove.ru/upload/iblock/362/5ukyt2iwdybvj1w3xkkj0ri3b062yiqi.png",
-			"category": "Смартфон",
-			"price": 51999,
-			"quantity": 75
-		},
-		{
-			"id": "3",
-			"name": "Dyson V15 Detect",
-			"description": "Беспроводной пылесос с лазерной подсветкой пыли",
-			"imageUrl": "https://istudio-shop.ru/upload/dev2fun.imagecompress/webp/iblock/2c1/ae638chn4eh3dclicxrtunowibij9f1n.webp",
-			"category": "Пылесос",
-			"price": 49999,
-			"quantity": 20
-		},
-		{
-			"id": "4",
-			"name": "Xiaomi Robot Vacuum S10",
-			"description": "Робот-пылесос с функцией мытья полов",
-			"imageUrl": "https://tech-iq.ru/upload/iblock/a05/wg7w1e35m0d2unuts0dbsc2rvy7kyrp2.png",
-			"category": "Пылесос",
-			"price": 18999,
-			"quantity": 100
-		},
-		{
-			"id": "5",
-			"name": "MacBook Pro 14 M2 Pro",
-			"description": "Ноутбук Apple с дисплеем Liquid Retina XDR",
-			"imageUrl": "https://appdom.ru/image/cache/catalog/mac/macbookpro14m3/apple-macbook-pro-14-2023-silver-2-1000x1000.jpg",
-			"category": "Ноутбук",
-			"price": 119999,
-			"quantity": 25
-		},
-		{
-			"id": "6",
-			"name": "ASUS ROG Zephyrus G14",
-			"description": "Игровой ноутбук с процессором AMD Ryzen 9",
-			"imageUrl": "https://microless.com/cdn/products/38462ad2d406abd96b94bf338fc4a235-hi.jpg",
-			"category": "Ноутбук",
-			"price": 99999,
-			"quantity": 30
-		},
-		{
-			"id": "7",
-			"name": "Sony WH-1000XM5",
-			"description": "Беспроводные наушники с шумоподавлением",
-			"imageUrl": "https://doctorhead.ru/upload/dev2fun.imagecompress/webp/iblock/81e/5zure0rbjtg5lv3nvxktztkaflzycvg3/sony_wh1000xm5_beige_silver.webp",
-			"category": "Наушники",
-			"price": 8999,
-			"quantity": 80
-		},
-		{
-			"id": "8",
-			"name": "AirPods Pro 2",
-			"description": "Наушники Apple с улучшенным шумоподавлением",
-			"imageUrl": "https://yablonya.com/wp-content/uploads/2023/11/dizain-bez-nazvaniya-2023-11-13t160146.196.jpg",
-			"category": "Наушники",
-			"price": 13999,
-			"quantity": 60
-		},
-		{
-			"id": "9",
-			"name": "PlayStation 5",
-			"description": "Игровая консоль нового поколения от Sony",
-			"imageUrl": "https://portagame.ru/katalog/game/ps5/ps5-slim-white_m.jpg",
-			"category": "Консоль",
-			"price": 58999,
-			"quantity": 15
-		},
-		{
-			"id": "10",
-			"name": "Xbox Series X",
-			"description": "Мощная игровая консоль от Microsoft",
-			"imageUrl": "https://cmstore.ru/upload/iblock/565/b7wv8u9k2bumsfj2765lgnl7kmkur1os.webp",
-			"category": "Консоль",
-			"price": 54999,
-			"quantity": 20
-		},
-		{
-			"id": "11",
-			"name": "Google Pixel 8 Pro",
-			"description": "Смартфон с улучшенной камерой и Tensor G3",
-			"imageUrl": "https://images.biggeek.ru/1/originals/3262/23236-8713269484_R_Z001A.jpg",
-			"category": "Смартфон",
-			"price": 59999,
-			"quantity": 40
-		},
-		{
-			"id": "12",
-			"name": "Philips Series 9000 Wet & Dry",
-			"description": "Электробритва с технологией SkinIQ",
-			"imageUrl": "https://images.philips.com/is/image/PhilipsConsumer/S9987_50-IMS-en_US?$jpglarge$",
-			"category": "Бритва",
-			"price": 15999,
-			"quantity": 70
-		},
-		{
-			"id": "13",
-			"name": "Samsung QN90C Neo QLED 55",
-			"description": "4K телевизор с технологией Mini LED",
-			"imageUrl": "https://image-us.samsung.com/SamsungUS/home/easy-asset/tbsr-8871/g1/02_QN50QN90CAFXZA_003_L-Perspective_Titan-Black-1600x12.jpg?$product-details-jpg$",
-			"category": "Телевизор",
-			"price": 79999,
-			"quantity": 10
-		},
-		{
-			"id": "14",
-			"name": "Bose QuietComfort Ultra",
-			"description": "Наушники с лучшим в классе шумоподавлением",
-			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcMtm-TlGextZBqXzXMMgaxXVmhugyuNYzzg&s",
-			"category": "Наушники",
-			"price": 19999,
-			"quantity": 45
-		},
-		{
-			"id": "15",
-			"name": "Lenovo ThinkPad X1 Carbon Gen 11",
-			"description": "Ультралёгкий бизнес-ноутбук с Intel Core i7",
-			"imageUrl": "https://cdn.kns.ru/linkpics/lenovo-thinkpad-x1-carbon-gen-11-21hm002gus_kod_903212.jpg",
-			"category": "Ноутбук",
-			"price": 109999,
-			"quantity": 35
-		},
-		{
-			"id": "16",
-			"name": "iRobot Roomba j7+",
-			"description": "Робот-пылесос с автоматической очисткой базы",
-			"imageUrl": "https://irobot-ltd.ru/files/products/roomba-j7_1.640x640.jpg",
-			"category": "Пылесос",
-			"price": 39999,
-			"quantity": 50
-		},
-		{
-			"id": "17",
-			"name": "Nintendo Switch OLED",
-			"description": "Портативная игровая консоль с улучшенным экраном",
-			"imageUrl": "https://ir.ozone.ru/s3/multimedia-y/c1000/6493315990.jpg",
-			"category": "Консоль",
-			"price": 34999,
-			"quantity": 65
-		},
-		{
-			"id": "18",
-			"name": "OnePlus 11",
-			"description": "Смартфон с быстрой зарядкой 100 Вт и Snapdragon 8 Gen 2",
-			"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC2IEVrIz-K3iCuOiORYp9iTLK6jgSLFJf3Q&s",
-			"category": "Смартфон",
-			"price": 49999,
-			"quantity": 55
-		},
-		{
-			"id": "19",
-			"name": "LG OLED C3 65",
-			"description": "OLED телевизор с яркими цветами и глубоким чёрным",
-			"imageUrl": "https://www.lg.com/content/dam/channel/wcms/sa_en/images/tvs/oled65c36la_amve_emsj_sa_en_c/DZ-8.jpg",
-			"category": "Телевизор",
-			"price": 129999,
-			"quantity": 5
-		},
-		{
-			"id": "20",
-			"name": "Braun Series 9 Pro",
-			"description": "Электробритва с 5 режущими элементами",
-			"imageUrl": "https://ir.ozone.ru/s3/multimedia-1-h/c1000/7117337681.jpg",
-			"category": "Бритва",
-			"price": 19999,
-			"quantity": 13
-		}
-	]
+  "users": [
+    {
+      "name": "Владислав",
+      "email": "qwe@qwe.qwe",
+      "password": "qweqwe",
+      "role": "user",
+      "id": 1,
+      "cart": []
+    },
+    {
+      "name": "Серега",
+      "email": "qwe@qwe.q",
+      "password": "qweqwe",
+      "role": "user",
+      "cart": [
+        {
+          "productId": "2"
+        },
+        {
+          "productId": "7"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro",
+      "description": "Флагманский смартфон Apple с процессором A17 Pro и камерой 48 МП",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohkecdOkdnCMvhHMVbyR9U6BAnJO4pNTrGw&s",
+      "category": "Смартфон",
+      "price": 68999,
+      "quantity": 50
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S23 Ultra",
+      "description": "Смартфон с экраном 6.8'' AMOLED и S-Pen",
+      "imageUrl": "https://technolove.ru/upload/iblock/362/5ukyt2iwdybvj1w3xkkj0ri3b062yiqi.png",
+      "category": "Смартфон",
+      "price": 51999,
+      "quantity": 75
+    },
+    {
+      "id": "3",
+      "name": "Dyson V15 Detect",
+      "description": "Беспроводной пылесос с лазерной подсветкой пыли",
+      "imageUrl": "https://istudio-shop.ru/upload/dev2fun.imagecompress/webp/iblock/2c1/ae638chn4eh3dclicxrtunowibij9f1n.webp",
+      "category": "Пылесос",
+      "price": 49999,
+      "quantity": 20
+    },
+    {
+      "id": "4",
+      "name": "Xiaomi Robot Vacuum S10",
+      "description": "Робот-пылесос с функцией мытья полов",
+      "imageUrl": "https://tech-iq.ru/upload/iblock/a05/wg7w1e35m0d2unuts0dbsc2rvy7kyrp2.png",
+      "category": "Пылесос",
+      "price": 18999,
+      "quantity": 100
+    },
+    {
+      "id": "5",
+      "name": "MacBook Pro 14 M2 Pro",
+      "description": "Ноутбук Apple с дисплеем Liquid Retina XDR",
+      "imageUrl": "https://appdom.ru/image/cache/catalog/mac/macbookpro14m3/apple-macbook-pro-14-2023-silver-2-1000x1000.jpg",
+      "category": "Ноутбук",
+      "price": 119999,
+      "quantity": 25
+    },
+    {
+      "id": "6",
+      "name": "ASUS ROG Zephyrus G14",
+      "description": "Игровой ноутбук с процессором AMD Ryzen 9",
+      "imageUrl": "https://microless.com/cdn/products/38462ad2d406abd96b94bf338fc4a235-hi.jpg",
+      "category": "Ноутбук",
+      "price": 99999,
+      "quantity": 30
+    },
+    {
+      "id": "7",
+      "name": "Sony WH-1000XM5",
+      "description": "Беспроводные наушники с шумоподавлением",
+      "imageUrl": "https://doctorhead.ru/upload/dev2fun.imagecompress/webp/iblock/81e/5zure0rbjtg5lv3nvxktztkaflzycvg3/sony_wh1000xm5_beige_silver.webp",
+      "category": "Наушники",
+      "price": 8999,
+      "quantity": 80
+    },
+    {
+      "id": "8",
+      "name": "AirPods Pro 2",
+      "description": "Наушники Apple с улучшенным шумоподавлением",
+      "imageUrl": "https://yablonya.com/wp-content/uploads/2023/11/dizain-bez-nazvaniya-2023-11-13t160146.196.jpg",
+      "category": "Наушники",
+      "price": 13999,
+      "quantity": 60
+    },
+    {
+      "id": "9",
+      "name": "PlayStation 5",
+      "description": "Игровая консоль нового поколения от Sony",
+      "imageUrl": "https://portagame.ru/katalog/game/ps5/ps5-slim-white_m.jpg",
+      "category": "Консоль",
+      "price": 58999,
+      "quantity": 15
+    },
+    {
+      "id": "10",
+      "name": "Xbox Series X",
+      "description": "Мощная игровая консоль от Microsoft",
+      "imageUrl": "https://cmstore.ru/upload/iblock/565/b7wv8u9k2bumsfj2765lgnl7kmkur1os.webp",
+      "category": "Консоль",
+      "price": 54999,
+      "quantity": 20
+    },
+    {
+      "id": "11",
+      "name": "Google Pixel 8 Pro",
+      "description": "Смартфон с улучшенной камерой и Tensor G3",
+      "imageUrl": "https://images.biggeek.ru/1/originals/3262/23236-8713269484_R_Z001A.jpg",
+      "category": "Смартфон",
+      "price": 59999,
+      "quantity": 40
+    },
+    {
+      "id": "12",
+      "name": "Philips Series 9000 Wet & Dry",
+      "description": "Электробритва с технологией SkinIQ",
+      "imageUrl": "https://images.philips.com/is/image/PhilipsConsumer/S9987_50-IMS-en_US?$jpglarge$",
+      "category": "Бритва",
+      "price": 15999,
+      "quantity": 70
+    },
+    {
+      "id": "13",
+      "name": "Samsung QN90C Neo QLED 55",
+      "description": "4K телевизор с технологией Mini LED",
+      "imageUrl": "https://image-us.samsung.com/SamsungUS/home/easy-asset/tbsr-8871/g1/02_QN50QN90CAFXZA_003_L-Perspective_Titan-Black-1600x12.jpg?$product-details-jpg$",
+      "category": "Телевизор",
+      "price": 79999,
+      "quantity": 10
+    },
+    {
+      "id": "14",
+      "name": "Bose QuietComfort Ultra",
+      "description": "Наушники с лучшим в классе шумоподавлением",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcMtm-TlGextZBqXzXMMgaxXVmhugyuNYzzg&s",
+      "category": "Наушники",
+      "price": 19999,
+      "quantity": 45
+    },
+    {
+      "id": "15",
+      "name": "Lenovo ThinkPad X1 Carbon Gen 11",
+      "description": "Ультралёгкий бизнес-ноутбук с Intel Core i7",
+      "imageUrl": "https://cdn.kns.ru/linkpics/lenovo-thinkpad-x1-carbon-gen-11-21hm002gus_kod_903212.jpg",
+      "category": "Ноутбук",
+      "price": 109999,
+      "quantity": 35
+    },
+    {
+      "id": "16",
+      "name": "iRobot Roomba j7+",
+      "description": "Робот-пылесос с автоматической очисткой базы",
+      "imageUrl": "https://irobot-ltd.ru/files/products/roomba-j7_1.640x640.jpg",
+      "category": "Пылесос",
+      "price": 39999,
+      "quantity": 50
+    },
+    {
+      "id": "17",
+      "name": "Nintendo Switch OLED",
+      "description": "Портативная игровая консоль с улучшенным экраном",
+      "imageUrl": "https://ir.ozone.ru/s3/multimedia-y/c1000/6493315990.jpg",
+      "category": "Консоль",
+      "price": 34999,
+      "quantity": 65
+    },
+    {
+      "id": "18",
+      "name": "OnePlus 11",
+      "description": "Смартфон с быстрой зарядкой 100 Вт и Snapdragon 8 Gen 2",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC2IEVrIz-K3iCuOiORYp9iTLK6jgSLFJf3Q&s",
+      "category": "Смартфон",
+      "price": 49999,
+      "quantity": 55
+    },
+    {
+      "id": "19",
+      "name": "LG OLED C3 65",
+      "description": "OLED телевизор с яркими цветами и глубоким чёрным",
+      "imageUrl": "https://www.lg.com/content/dam/channel/wcms/sa_en/images/tvs/oled65c36la_amve_emsj_sa_en_c/DZ-8.jpg",
+      "category": "Телевизор",
+      "price": 129999,
+      "quantity": 5
+    },
+    {
+      "id": "20",
+      "name": "Braun Series 9 Pro",
+      "description": "Электробритва с 5 режущими элементами",
+      "imageUrl": "https://ir.ozone.ru/s3/multimedia-1-h/c1000/7117337681.jpg",
+      "category": "Бритва",
+      "price": 19999,
+      "quantity": 13
+    }
+  ]
 }

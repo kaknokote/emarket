@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../store/slices/products-slice';
 import { useEffect } from 'react';
 import { ProductCard } from './product-card';
-import { Link } from 'react-router-dom';
 
 export const Products = () => {
 	const dispatch = useDispatch();

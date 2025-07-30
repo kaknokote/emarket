@@ -8,17 +8,17 @@ import { useAuth } from '../../hooks';
 export const Register = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { status, error, isAuthenticated, clearError } = useAuth();
+	const { status, error, isAuthentificated, clearError } = useAuth();
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
 
 	useEffect(() => {
-		if (isAuthenticated) {
+		if (isAuthentificated) {
 			navigate('/');
 		}
-	}, [isAuthenticated, navigate]);
+	}, [isAuthentificated, navigate]);
 
 	const handleChange = (setter) => (event) => {
 		setter(event.target.value);
