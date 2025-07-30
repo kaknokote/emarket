@@ -1,12 +1,13 @@
-# React + Vite
+Тренировочный проект веб-магазина на React + JS. Стек: 
+	"@reduxjs/toolkit": "^2.8.2",
+	"@tailwindcss/vite": "^4.1.11",
+	"json-server": "^1.0.0-beta.3",
+	"react": "^19.1.0",
+	"react-dom": "^19.1.0",
+	"react-icons": "^5.5.0",
+	"react-redux": "^9.2.0",
+	"react-router-dom": "^7.7.0",
+	"tailwindcss": "^4.1.11"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Проект довольно сырой, много мест для доработки. 
+Мой  первый проект на redux-toolkit. До этого использовал только ванильный redux и redux-thunk.
